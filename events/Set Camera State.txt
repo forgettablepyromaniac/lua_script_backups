@@ -1,0 +1,7 @@
+Sets the status of automatic camera zooming
+
+Value 1: Value to set zooming state to (true, false)
+
+Value 2: If true, will force camera zooming to
+remain in the state specified regardless of any other
+events.
