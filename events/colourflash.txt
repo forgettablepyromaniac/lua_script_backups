@@ -1,0 +1,8 @@
+value one:
+Colour of flash (In HEXADECIMAL)
+example of "0xFFFFFFFF" for a pure white flash
+
+value two:
+Duration of flash (in seconds)
+
+by FP
