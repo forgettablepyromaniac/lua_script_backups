@@ -1,0 +1,7 @@
+Have player 3 play an animation.
+
+Value 1: Animation name
+Value 2: Var of player 3 in your song's strumline script
+
+Written by RedstoneRuler
+(fp's note to self: default var is mario)
