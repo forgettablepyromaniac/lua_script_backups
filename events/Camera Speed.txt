@@ -1,0 +1,4 @@
+Fuck with the camera speed, dawg.
+
+Value 1: The tween time to make the camera
+take its adhd meds and focus for once.
