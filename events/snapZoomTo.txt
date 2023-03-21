@@ -1,0 +1,3 @@
+Value 1 = Sets Zoom level instantly to this value.
+
+DEFAULT VALUE is generally 0.9.

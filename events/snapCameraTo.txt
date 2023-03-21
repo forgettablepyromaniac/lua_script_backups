@@ -1,0 +1,7 @@
+Value 1 = X Value to Snap Camera to.
+Value 2 = Y Value to Snap Camera to.
+
+Where to snap to? idk.
+
+To return to normal (i think), use
+"Camera Set Pos" with blank values.
