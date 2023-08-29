@@ -1,0 +1,34 @@
+-- local angler = 2
+-- local areWeRotatin = false
+-- bpmTweenorAgain2 = 0
+
+-- function onCreatePost()
+--     bpmTweenorAgain2 = 120/curBpm
+-- end
+
+-- function onEvent(eventName, val1, val2, strumTime)
+--     if eventName == "camGameRotate" then
+--         if val1 ~= '' then
+--             if val1 == "true" then
+--                 areWeRotatin = true
+--             else
+--                 areWeRotatin = false
+--             end
+--         end
+--     end
+-- end
+
+-- function onBeatHit()
+--     if curBeat % 4 == 0 then
+--         if areWeRotatin then
+--             setProperty("camGame.angle", angler, false)
+--             doTweenAngle("camGameAngler", "camGame", nil, bpmTweenorAgain2, "sineOut")
+--         end
+--     end
+--     if curBeat % 4 == 2 then
+--         if areWeRotatin then
+--             setProperty("camGame.angle", -angler, false)
+--             doTweenAngle("camGameAngler", "camGame", nil, bpmTweenorAgain2, "sineOut")
+--         end
+--     end
+-- end

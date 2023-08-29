@@ -1,0 +1,10 @@
+Make the strums go all wheeeeee
+
+val1 turns on bounce
+val2 turns on rotate
+no value in either uses previous option
+anything other than true turns them off
+typing true turns them on (not in the sexual way)
+
+this one if u use it use it with strumHud and
+credit me and the strumHud guy :)
