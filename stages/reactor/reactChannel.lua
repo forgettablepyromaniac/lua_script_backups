@@ -3,7 +3,7 @@ function onCreate()
         { file = "wall", scale = 0.8, xOffset = -500, yOffset = -200, xScroll = 0.5, yScroll = 0.3},
         { file = "coolLights", scale = 0.7, xOffset = -50, yOffset = 100, xScroll = 0.7, yScroll = 0.7},
         { file = "bar", scale = 0.8, xOffset = -700, yOffset = 240, xScroll = 0.8, yScroll = 0.8},
-        { file = "susfloor", scale = 1.2, xOffset = -500, yOffset = 350, xScroll = 0.9, yScroll = 1},
+        { file = "susfloor", scale = 1.2, xOffset = -444, yOffset = 350, xScroll = 0.9, yScroll = 1},
         { file = "coir", scale = 0.8, xOffset = 350, yOffset = -150, xScroll = 0.87, yScroll = 1},
         { file = "beeper", scale = 0.8, xOffset = 1110, yOffset = -50, xScroll = 0.9, yScroll = 1},
         { file = "beeper", scale = 0.8, xOffset = 160, yOffset = -50, xScroll = 0.9, yScroll = 1},
