@@ -5,9 +5,17 @@ local bacc2FUCKYOU = 0 -- fuck you downscroll cucks
 local bounceAmount = 0 -- default 20
 local rotateAmount = 3 -- default 2
 local bpmTweenorAgain = 0
+local tweenTypeBounce = "elasticOut"
+local tweenTypeRotate = "sineOut"
+local multiplierSpeed = 4
+
+function updateSpeed()
+    multiplierSpeed = 60 * multiplierSpeed
+    bpmTweenorAgain = multiplierSpeed/curBpm
+end
 
 function onCreatePost()
-    bpmTweenorAgain = 120/curBpm
+    updateSpeed()
 end
 
 function onEvent(eventName, val1, val2, strumTime)
@@ -27,6 +35,28 @@ function onEvent(eventName, val1, val2, strumTime)
             end
         end
     end
+    if eventName == "strumHudMovementTypes" then
+        if val1 ~= '' then
+            tweenTypeBounce = val1
+        end
+        if val2 ~= '' then
+            tweenTypeRotate = val2
+        end
+    end
+    if eventName == "strumHudAmounts" then
+        if val1 ~= '' then
+            bounceAmount = val1
+        end
+        if val2 ~= '' then
+            rotateAmount = val2
+        end
+    end
+    if eventName == "strumHudSpeed" then
+        if val1 ~= '' then
+            multiplierSpeed = val1
+            updateSpeed()
+        end
+    end
 end
 
 function onBeatHit()
@@ -34,30 +64,28 @@ function onBeatHit()
         if areWeBouncin then
             setProperty("strumHUD.y", bounceAmount, false)
             if not downscroll then
-                doTweenY("strumHUDshoomver", "strumHUD", bacc2Norm, bpmTweenorAgain, "sineOut")
+                doTweenY("strumHUDshoomver", "strumHUD", bacc2Norm, bpmTweenorAgain, tweenTypeBounce)
             else
-                doTweenY("strumHUDshoomver", "strumHUD", bacc2FUCKYOU, bpmTweenorAgain, "sineOut")
+                doTweenY("strumHUDshoomver", "strumHUD", bacc2FUCKYOU, bpmTweenorAgain, ttweenTypeBounce)
             end
         end
         if areWeTurnin then
             setProperty("strumHUD.angle", rotateAmount, false)
-            doTweenAngle("strumHUDrotater", "strumHUD", 0, bpmTweenorAgain, "sineOut")
+            doTweenAngle("strumHUDrotater", "strumHUD", 0, bpmTweenorAgain, tweenTypeRotate)
         end
     end
     if curBeat % 4 == 2 then
         if areWeBouncin then
-            if not areWeTurnin then
-                setProperty("strumHUD.y", bounceAmount, false)
-                if not downscroll then
-                    doTweenY("strumHUDshoomver", "strumHUD", bacc2Norm, bpmTweenorAgain, "sineOut")
-                else
-                    doTweenY("strumHUDshoomver", "strumHUD", bacc2FUCKYOU, bpmTweenorAgain, "sineOut")
-                end
+            setProperty("strumHUD.y", bounceAmount, false)
+            if not downscroll then
+                doTweenY("strumHUDshoomver", "strumHUD", bacc2Norm, bpmTweenorAgain, tweenTypeBounce)
+            else
+                doTweenY("strumHUDshoomver", "strumHUD", bacc2FUCKYOU, bpmTweenorAgain, tweenTypeBounce)
             end
         end
         if areWeTurnin then
             setProperty("strumHUD.angle", -rotateAmount, false)
-            doTweenAngle("strumHUDrotater", "strumHUD", 0, bpmTweenorAgain, "sineOut")
+            doTweenAngle("strumHUDrotater", "strumHUD", 0, bpmTweenorAgain, tweenTypeRotate)
         end
     end
     -- debugPrint(curBeat % 4)

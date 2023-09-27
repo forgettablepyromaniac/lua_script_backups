@@ -1,0 +1,12 @@
+Change the strumHudBounce movetypes.
+
+val1 changes bounce type
+val2 changes rotate type
+
+these will be strings.
+
+defaults
+bounce = "elasticOut"
+rotate = "sineOut"
+
+if either is blank, it will not be updated.
