@@ -1,0 +1,7 @@
+# File Containing all the Song Names for credits box.
+# File Manually Created by FP on Feb 7, 2024
+
+# Song Name::Song Creator::Song Name Colour::Song Creator Colour::Box Colour::How Long it Stays
+
+[song-name]
+Song Name::Song Creator::FFFFFF::D38536::CC5203::2

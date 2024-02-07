@@ -1,0 +1,11 @@
+tl;dr:
+put lua in scripts folder
+either make a file called "allSonsInfo.txt" in the data folder or use the python script
+information in the thing
+profit
+
+[Song Folder Name]
+Song Name::Song Creator::Song Name Colour::Song Creator Colour::Box Colour::Background Colour::How Long it Stays
+
+use the python script in the data folder or specify in the arguments when running the file.
+"python3 makeAllSongsInfo.py -h" tells you basically the same thing
