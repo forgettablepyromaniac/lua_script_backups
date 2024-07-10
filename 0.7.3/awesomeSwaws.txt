@@ -1,0 +1,7 @@
+Change notespeed multiplier per strumbar
+
+val1 - strum to change the speed of
+(1, 2, 3, 4):bf,dad,both
+
+val2 - time it takes to change & what to change it to
+(0 instant, time is multiplied by playbackRate):multSpeed

@@ -1,0 +1,13 @@
+Subtittles.
+Val1 = Subtitles (Will not include "")
+Val2 = Subtitles Colour.
+---
+
+Typing "//" in Val1 before the rest of
+the subtitle will not make a new line
+and will instead update the current line.
+
+if Val2 == "clear" then all subtitles get cleared out.
+^^^ This is regardless of what is typed into Val1.
+
+by FP
