@@ -12,7 +12,7 @@ don't expect too much of it though.
 
 # version support
 I've fixed this up by putting the version the script has been tested in inside of its own folder
-0.6.3 might work on 0.7.1h and 0.7.1h might work on 0.7.2h, but i never tested them,
+0.6.3 might work on later versions, and 0.7.3 could work on earlier versions, but i never tested them,
 so what you get is what you get, no ifs ands or buts.
 
 # i dont get how licesnes work
