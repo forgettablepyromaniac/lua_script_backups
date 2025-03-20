@@ -17,10 +17,23 @@ shouldBounceBoyfriend = false
 shouldBounceDad = false
 shouldBounceGF = false
 
+function onCreate()
+    setProperty("skipArrowStartTween", true)
+end
+
 function onCreatePost()
+    for i = 0, 7 do
+        setProperty('strumLineNotes.members['..i..'].alpha', 0)
+    end
     triggerEvent("z-setSpeed", 6.2, 6.2) -- if you're not using z-Zoom.lua, comment this line and uncomment the line below.
     -- setProperty("camZoomingDecay", 2)
     updateKadeTimer()
+end
+
+function onCountdownStarted()
+    for i = 0, 7 do
+        noteTweenAlpha("weTweeningNoteAlphasDude"..i, i, 1, ((60*4)/curBpm)/playbackRate, "quadOut")
+    end
 end
 
 function onSectionHit() -- allows for bpm changes to work with kadeAnims
