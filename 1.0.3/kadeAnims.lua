@@ -1,7 +1,8 @@
 defaultTimer = 30 -- if you want it to take longer to return to idle, increase this. typically a multiple of 30.
 bpmPlaceholder = 150 -- gets updated accordingly, only update kadeTimer when nessecary.
+isPaused = false
 
--- every multiple of 200 that the bpm hits, it'll multiply default timer by 2x to keep it looking decent for higher bpms.
+-- every multiple of 200 that the bpm hits, it'll add default timer by 30 per 200 to keep it looking decent for higher bpms.
 function getMult(n)
     return math.floor(n/200) + 1
 end
@@ -9,6 +10,7 @@ end
 function updateKadeTimer()
     bpmPlaceholder = curBpm
     kadeTimer = defaultTimer * getMult(curBpm)
+    -- debugPrint("new bpm: "..curBpm.." new timer: "..kadeTimer)
 end
 
 shouldBounceBoyfriend = false
@@ -24,7 +26,6 @@ end
 function onSectionHit() -- allows for bpm changes to work with kadeAnims
     if bpmPlaceholder ~= curBpm then
         updateKadeTimer()
-        debugPrint(curBpm.." "..bpmPlaceholder)
     end
 end
 
